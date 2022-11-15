@@ -6,7 +6,6 @@ use std::fmt;
 pub enum ChainType {
     Elrond,
     Ethers,
-    InternetComputer,
     Near,
     Solana,
     Tendermint,
@@ -33,7 +32,6 @@ pub enum Chain {
     Fantom,
     Harmony,
     Heco,
-    InternetComputer,
     KuCoin,
     Kusama,
     Moonbeam,
@@ -67,7 +65,6 @@ impl Chain {
             Chain::Ethereum,
             Chain::Fantom,
             Chain::Harmony,
-            Chain::InternetComputer,
             // todo ssl handshake failure
             // Chain::Heco,
             Chain::KuCoin,
@@ -108,7 +105,6 @@ impl Chain {
             Chain::Fantom => "Fantom",
             Chain::Harmony => "Harmony",
             Chain::Heco => "Heco",
-            Chain::InternetComputer => "Internet Computer",
             Chain::KuCoin => "KuCoin",
             Chain::Kusama => "Kusama",
             Chain::Moonbeam => "Moonbeam",
@@ -147,7 +143,6 @@ impl Chain {
             | Chain::Polygon
             | Chain::Rootstock => ChainType::Ethers,
             Chain::Elrond => ChainType::Elrond,
-            Chain::InternetComputer => ChainType::InternetComputer,
             Chain::Near => ChainType::Near,
             Chain::Solana => ChainType::Solana,
             Chain::Stellar => ChainType::Stellar,
@@ -178,7 +173,6 @@ impl<'a> TryFrom<&'a str> for Chain {
             "ethereum" => Ok(Chain::Ethereum),
             "fantom" => Ok(Chain::Fantom),
             "harmony" => Ok(Chain::Harmony),
-            "internetcomputer" => Ok(Chain::InternetComputer),
             "heco" => Ok(Chain::Heco),
             "kucoin" => Ok(Chain::KuCoin),
             "kusama" => Ok(Chain::Kusama),
